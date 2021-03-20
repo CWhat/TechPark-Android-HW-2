@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
+        android:layout_margin="8dp"
         android:text="@string/add" />
 
 </RelativeLayout>
