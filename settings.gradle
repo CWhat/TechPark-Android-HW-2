@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "TechPark-Android-HW-2"
