@@ -24,8 +24,8 @@ class IntViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
             val args = Bundle()
             args.putString(ru.crazy_what.techpark_android_hw_2.fragments.NUM_EXTRA, (it as TextView).text.toString())
-
             show.arguments = args
+
             (it.context as AppCompatActivity).supportFragmentManager.beginTransaction()
                     .replace(R.id.main_layout, show, "show")
                     .addToBackStack("show")
