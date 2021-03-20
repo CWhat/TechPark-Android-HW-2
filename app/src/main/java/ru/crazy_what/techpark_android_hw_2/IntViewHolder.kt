@@ -18,7 +18,6 @@ class IntViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             view.setTextColor(Color.BLUE)
 
         view.text = num.toString()
-
         view.setOnClickListener {
             val show = ShowFragment()
 
