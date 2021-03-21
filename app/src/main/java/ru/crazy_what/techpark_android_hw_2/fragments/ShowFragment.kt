@@ -15,8 +15,11 @@ const val DEFAULT_VALUE = "-1"
 class ShowFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        val textView = inflater.inflate(R.layout.show_fragment, container, false) as TextView
+        return inflater.inflate(R.layout.show_fragment, container, false)
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val textView: TextView = view.findViewById(R.id.num)
         val str = arguments?.getString(NUM_EXTRA, DEFAULT_VALUE) ?: DEFAULT_VALUE
         textView.text = str
 
@@ -24,7 +27,5 @@ class ShowFragment : Fragment() {
             textView.setTextColor(Color.RED)
         else
             textView.setTextColor(Color.BLUE)
-
-        return textView
     }
 }
