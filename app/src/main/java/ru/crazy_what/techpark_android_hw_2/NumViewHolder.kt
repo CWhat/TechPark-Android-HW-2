@@ -7,6 +7,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import ru.crazy_what.techpark_android_hw_2.fragments.ShowFragment
+import ru.crazy_what.techpark_android_hw_2.fragments.NUM_EXTRA
 
 const val SHOW_NAME = "show"
 
@@ -24,7 +25,7 @@ class NumViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             val show = ShowFragment()
 
             val args = Bundle()
-            args.putString(ru.crazy_what.techpark_android_hw_2.fragments.NUM_EXTRA, (it as Button).text.toString())
+            args.putString(NUM_EXTRA, (it as Button).text.toString())
             show.arguments = args
 
             (it.context as AppCompatActivity).supportFragmentManager.beginTransaction()
