@@ -9,4 +9,6 @@
     android:minHeight="48dp"
     android:textSize="14sp"
     android:layout_margin="5dp"
+    android:backgroundTint="@color/purple_200"
+    tools:textColor="@color/blue"
     tools:text="100" />
