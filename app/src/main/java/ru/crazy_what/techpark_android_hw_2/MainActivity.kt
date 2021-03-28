@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import ru.crazy_what.techpark_android_hw_2.fragments.MainFragment
 
-const val MAIN_NAME = "main"
+private const val MAIN_NAME = "main"
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,4 +18,5 @@ class MainActivity : AppCompatActivity() {
                     .commit()
         }
     }
+
 }

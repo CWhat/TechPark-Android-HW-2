@@ -4,10 +4,10 @@
     android:id="@+id/text"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="@dimen/it_margin"
     android:gravity="center"
-    android:minWidth="48dp"
-    android:minHeight="48dp"
-    android:textSize="14sp"
-    android:layout_margin="5dp"
-    tools:textColor="@color/blue"
-    tools:text="100" />
+    android:minWidth="@dimen/it_min_width"
+    android:minHeight="@dimen/it_min_height"
+    android:textSize="@dimen/it_text_size"
+    tools:text="100"
+    tools:textColor="@color/blue" />

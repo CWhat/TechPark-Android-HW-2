@@ -4,15 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class NumAdapter : RecyclerView.Adapter<NumViewHolder>() {
-
-    companion object {
-        private var count: Int = 100
-    }
+class NumAdapter(private val showNum: NumWorker) : RecyclerView.Adapter<NumViewHolder>() {
+    private var count = showNum.getCount()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
-        return NumViewHolder(view)
+        return NumViewHolder(view, showNum)
     }
 
     override fun onBindViewHolder(holder: NumViewHolder, position: Int) {
@@ -26,6 +23,7 @@ class NumAdapter : RecyclerView.Adapter<NumViewHolder>() {
     fun addInt() {
         notifyItemInserted(count)
         count++
+        showNum.setCount(count)
     }
 
 }

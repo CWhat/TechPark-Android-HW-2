@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="it_min_width">48dp</dimen>
+    <dimen name="it_min_height">48dp</dimen>
+    <dimen name="it_text_size">14sp</dimen>
+    <dimen name="it_margin">5dp</dimen>
+
+    <dimen name="big_text_size">60sp</dimen>
+
+    <dimen name="add_margin">5dp</dimen>
+</resources>

@@ -10,9 +10,10 @@ import androidx.fragment.app.Fragment
 import ru.crazy_what.techpark_android_hw_2.R
 
 const val NUM_EXTRA = "num"
-const val DEFAULT_VALUE = "-1"
+private const val DEFAULT_VALUE = -1
 
 class ShowFragment : Fragment() {
+    private var num: Int = DEFAULT_VALUE
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return inflater.inflate(R.layout.show_fragment, container, false)
@@ -20,12 +21,19 @@ class ShowFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val textView: TextView = view.findViewById(R.id.num)
-        val str = arguments?.getString(NUM_EXTRA, DEFAULT_VALUE) ?: DEFAULT_VALUE
-        textView.text = str
+        num = savedInstanceState?.getInt(NUM_EXTRA)
+                ?: (arguments?.getInt(NUM_EXTRA, DEFAULT_VALUE) ?: DEFAULT_VALUE)
 
-        if (str.toInt() % 2 == 0)
+        textView.text = num.toString()
+
+        if (num % 2 == 0)
             textView.setTextColor(Color.RED)
         else
             textView.setTextColor(Color.BLUE)
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt(NUM_EXTRA, num)
+    }
+
 }
